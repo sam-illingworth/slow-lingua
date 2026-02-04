@@ -32,7 +32,7 @@ A structured system for learning languages using Claude as your tutor. Covers al
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/slowaisubstack/slow-lingua.git
+   git clone https://github.com/sam-illingworth/slow-lingua.git
    cd slow-lingua
    ```
 
@@ -119,4 +119,4 @@ MIT — use it, adapt it, share it.
 
 ---
 
-*Part of the [Slow AI](https://slowai.substack.com) project.*
+*Part of the [Slow AI](https://theslowai.substack.com/) project.*
