@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Audio temp files
+audio/
+
+# Personal progress (users create their own)
+# Uncomment these if you want to keep your progress private:
+# progress/
+# app/user-profile.md
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+*.log
+.env
