@@ -54,6 +54,26 @@ Log responses here.
 
 ---
 
+## Session 2 - 2026-02-04 (First Real Session)
+
+### How was it?
+Really good, perhaps a little short.
+
+### Suggestions
+1. **Track active time, not elapsed time** - Users may start/stop. Track actual learning time (questions answered).
+2. **Offer extension if short** - If committed to 30-min session but under 20 mins done, offer to continue.
+3. **Warn on time limit** - When approaching end of session, tell user and ask if they want to continue.
+
+### Feature Request: Ralph Loop Implementation
+Implement mid-session checkpointing so a fresh context window can resume exactly where user left off. Store:
+- Exact current position (phase, exercise, pending question)
+- Unsaved progress (words introduced, errors made)
+- Conversation context
+
+**Status:** Implemented - added `session-state.md` and checkpointing instructions to CLAUDE.md.
+
+---
+
 ## Future Feedback
 
 [Add new feedback as collected]

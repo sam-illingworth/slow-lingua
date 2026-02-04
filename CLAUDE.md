@@ -4,27 +4,23 @@ A calm, focused language learning app powered by Claude. No gamification, no str
 
 ---
 
-## SETUP STATUS (Read this first!)
+## Context Management (Ralph Loop)
 
-**Current state:** Git repo initialized locally, not yet pushed to GitHub.
+This app uses external state files for session continuity. Each conversation may be a fresh context window, so all session state must be persisted to files.
 
-**When user says "start project", do this:**
+**Key principle:** Fresh brain + accumulated knowledge. Never rely on conversation history for critical state.
 
-1. **Finish GitHub setup:**
-   - Run `gh auth status` to check if authenticated
-   - If not authenticated, run `gh auth login` (browser flow)
-   - Then run: `gh repo create slow-lingua --public --description "A calm, focused language learning system powered by Claude Code" --source . --push`
-   - Confirm repo is live at https://github.com/[username]/slow-lingua
+### Files that preserve context:
+- `session-state.md` - Exact mid-session position (for resuming interrupted sessions)
+- `current-status.md` - Overall progress, task completion, skill levels
+- `vocabulary.md` - All learned words with accuracy tracking
+- `sessions/day-XXX.md` - Completed session logs
 
-2. **Set up user for learning:**
-   - Copy `./app/user-profile-template.md` to `./app/user-profile.md`
-   - Copy `./progress/french-example/` to `./progress/french/` (or chosen language)
-   - Clear the example data and start fresh
-   - Run onboarding OR resume from Day 1 (user is Sam, learning French, 30 mins/day, B1 goal)
-
-3. **Start first real session**
-
-**Delete this section once setup is complete.**
+### Checkpointing rules:
+1. **Update session-state.md** at every phase transition (review → new material → practice → wrap-up)
+2. **Update session-state.md** before any exercise that might take multiple turns
+3. **Include the exact pending question** so a fresh session can continue seamlessly
+4. **Log unsaved progress** (words introduced, errors made) in session-state.md until wrap-up saves them permanently
 
 ---
 
@@ -32,17 +28,24 @@ A calm, focused language learning app powered by Claude. No gamification, no str
 
 When this project loads, follow these steps:
 
-### 1. Check for existing user
+### 1. Read session state FIRST
+Read `./progress/[language]/session-state.md` before anything else.
+- If status is `in_progress`: Resume from the exact position recorded. Do not re-ask questions already answered.
+- If status is `idle`: Proceed to step 2.
+
+### 2. Check for existing user
 Read `./app/user-profile.md`. If it doesn't exist, run onboarding.
 
-### 2. If new user - run onboarding
+### 3. If new user - run onboarding
 Follow the onboarding flow in `./app/onboarding.md`
 
-### 3. If returning user - start session
-1. Ask: "What day is it today?"
-2. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
-3. Load their progress from `./progress/[language]/`
-4. Run session based on their current task and skill balance
+### 4. If returning user - start new session
+1. Update session-state.md: status = "in_progress"
+2. Ask: "What day is it today?"
+3. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
+4. Load their progress from `./progress/[language]/`
+5. Run session based on their current task and skill balance
+6. Checkpoint session-state.md at each phase transition
 
 ---
 
@@ -51,9 +54,18 @@ Follow the onboarding flow in `./app/onboarding.md`
 Each session covers all four skills:
 
 1. **Review** (~5 mins) - Quick quiz on recent vocabulary/phrases
+   - *Checkpoint: Update session-state.md with phase="review", exercises completed*
 2. **New material** (~15 mins) - Current task with speaking, listening, reading, writing exercises
+   - *Checkpoint: Update session-state.md with phase="new_material", current exercise, pending question*
 3. **Practice** (~8 mins) - Conversation or extended exercise
+   - *Checkpoint: Update session-state.md with phase="practice"*
 4. **Wrap-up** (~2 mins) - Summary, save progress, preview next session
+   - Save all progress to permanent files (vocabulary.md, current-status.md, day-XXX.md)
+   - Set session-state.md status = "idle"
+   - Ask meta feedback questions, log to feedback.md
+
+### Time tracking
+Track active learning time (questions answered), not elapsed time. If user has done <20 mins of a 30-min session, offer to continue. Warn when approaching time limit.
 
 ---
 
@@ -192,16 +204,18 @@ Hours to reach levels (for English speakers):
 │   ├── onboarding.md      # Onboarding flow
 │   ├── user-profile.md    # User's settings and goals
 │   ├── curriculum.md      # Task-based curriculum structure
+│   ├── feedback.md        # User feedback on app design
 │   └── languages/         # Language-specific config
 │       ├── french.md
 │       ├── spanish.md
 │       └── ...
 ├── progress/
 │   └── [language]/
-│       ├── current-status.md
-│       ├── vocabulary.md
+│       ├── session-state.md   # CRITICAL: Mid-session checkpoint for Ralph Loop continuity
+│       ├── current-status.md  # Overall progress and task completion
+│       ├── vocabulary.md      # All learned words with accuracy
 │       └── sessions/
-│           └── day-XXX.md
+│           └── day-XXX.md     # Completed session logs
 ├── content/
 │   └── [language]/
 │       ├── tasks/         # Task-specific content
