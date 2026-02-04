@@ -211,6 +211,6 @@ The key insight: The official "Ralph Loop" plugins that just retry in the same c
 
 ## Credits
 
-Pattern popularized by Chase H AI. This skill adapted for general Claude Code use.
+Pattern from [snarktank/ralph](https://github.com/snarktank/ralph). Adapted for general Claude Code use.
 
 Learn more: https://theslowai.substack.com/

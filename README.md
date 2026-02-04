@@ -120,7 +120,7 @@ Copy these to your other Claude Code projects to prevent context degradation.
 ## Credits
 
 - Methodology adapted from [Artificial Corner](https://artificialcorner.com/s/language)
-- Ralph Loop pattern from [Chase H AI](https://www.youtube.com/@ChaseHAI)
+- Ralph Loop pattern from [snarktank/ralph](https://github.com/snarktank/ralph)
 - Built with [Claude Code](https://claude.ai/code)
 
 ## License
