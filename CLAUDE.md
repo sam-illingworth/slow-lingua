@@ -40,12 +40,14 @@ Read `./app/user-profile.md`. If it doesn't exist, run onboarding.
 Follow the onboarding flow in `./app/onboarding.md`
 
 ### 4. If returning user - start new session
-1. Update session-state.md: status = "in_progress"
-2. Ask: "What day is it today?"
-3. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
-4. Load their progress from `./progress/[language]/`
-5. Run session based on their current task and skill balance
-6. Checkpoint session-state.md at each phase transition
+1. Get today's date from system: `date +%Y-%m-%d`
+2. Check session-state.md: if date changed, reset "Sessions Today" counter
+3. Check sessions today count - if ≥2, run retention quiz before proceeding
+4. Update session-state.md: status = "in_progress", update date
+5. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
+6. Load their progress from `./progress/[language]/`
+7. Run session based on their current task and skill balance
+8. Checkpoint session-state.md at each phase transition
 
 ---
 
