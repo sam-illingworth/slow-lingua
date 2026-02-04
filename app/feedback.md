@@ -81,6 +81,22 @@ User notes tendency to rush through material.
 
 **Status:** Implemented in CLAUDE.md and session-state.md tracks sessions per day.
 
+### Listening Practice (Session 2)
+Not enough listening. Two changes needed:
+1. **Play audio for all new phrases** when introducing them (don't just show text)
+2. **More listening exercises overall** throughout sessions
+
+**Status:** Added to CLAUDE.md
+
+### Tool Output Clutter (Session 2)
+Seeing file operations mid-session is distracting from learning.
+
+**Solution:** Batch all file operations to wrap-up phase. During the lesson, only show French content. Save everything at the end in one block.
+
+**Trade-off:** If session interrupted, progress not saved until wrap-up. Acceptable for 30-min sessions.
+
+**Status:** Updated approach for future sessions
+
 ---
 
 ## Future Feedback

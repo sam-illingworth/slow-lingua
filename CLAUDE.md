@@ -17,10 +17,10 @@ This app uses external state files for session continuity. Each conversation may
 - `sessions/day-XXX.md` - Completed session logs
 
 ### Checkpointing rules:
-1. **Update session-state.md** at every phase transition (review → new material → practice → wrap-up)
-2. **Update session-state.md** before any exercise that might take multiple turns
-3. **Include the exact pending question** so a fresh session can continue seamlessly
-4. **Log unsaved progress** (words introduced, errors made) in session-state.md until wrap-up saves them permanently
+1. **Keep session state in memory during the lesson** - don't write files mid-session
+2. **Batch all file operations to wrap-up** - vocabulary, status, session log, session-state all saved at once at the end
+3. **Only checkpoint mid-session if explicitly pausing** - if user says "pause" or "stop", then save state immediately
+4. This keeps the learning experience clean (no tool output clutter during French practice)
 
 ---
 
@@ -87,6 +87,9 @@ This prevents the illusion of progress without actual retention.
 
 ### One question at a time
 Never batch questions. Ask one, wait for answer, then next.
+
+### Audio for new phrases
+When introducing any new word or phrase, ALWAYS play it aloud using text-to-speech before asking the user to produce it. Don't just show text. Users need to hear how it sounds.
 
 ### Four skills balance
 Track proficiency in speaking, listening, reading, writing separately. Weight practice toward weaker skills.
