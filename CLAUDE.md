@@ -2,6 +2,32 @@
 
 A calm, focused language learning app powered by Claude. No gamification, no streaks, no guilt - just steady progress.
 
+---
+
+## SETUP STATUS (Read this first!)
+
+**Current state:** Git repo initialized locally, not yet pushed to GitHub.
+
+**When user says "start project", do this:**
+
+1. **Finish GitHub setup:**
+   - Run `gh auth status` to check if authenticated
+   - If not authenticated, run `gh auth login` (browser flow)
+   - Then run: `gh repo create slow-lingua --public --description "A calm, focused language learning system powered by Claude Code" --source . --push`
+   - Confirm repo is live at https://github.com/[username]/slow-lingua
+
+2. **Set up user for learning:**
+   - Copy `./app/user-profile-template.md` to `./app/user-profile.md`
+   - Copy `./progress/french-example/` to `./progress/french/` (or chosen language)
+   - Clear the example data and start fresh
+   - Run onboarding OR resume from Day 1 (user is Sam, learning French, 30 mins/day, B1 goal)
+
+3. **Start first real session**
+
+**Delete this section once setup is complete.**
+
+---
+
 ## Starting a Session
 
 When this project loads, follow these steps:
