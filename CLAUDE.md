@@ -41,9 +41,12 @@ Follow the onboarding flow in `./app/onboarding.md`
 
 ### 4. If returning user - start new session
 1. Get today's date from system: `date +%Y-%m-%d`
-2. Check session-state.md: if date changed, reset "Sessions Today" counter
-3. Check sessions today count - if ≥2, run retention quiz before proceeding
-4. Update session-state.md: status = "in_progress", update date
+2. **Count today's completed sessions from session logs** (source of truth):
+   - Check `./progress/[language]/sessions/` for files matching today's date
+   - Count "Session X" entries within today's log file
+   - Do NOT rely solely on session-state.md for this count (it may be absent or stale)
+3. If sessions today ≥2: run retention quiz before proceeding (see Session Pacing below)
+4. Update session-state.md: status = "in_progress", update date, record session count
 5. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
 6. Load their progress from `./progress/[language]/`
 7. Run session based on their current task and skill balance
@@ -70,7 +73,7 @@ Each session covers all four skills:
 Track active learning time (questions answered), not elapsed time. If user has done <20 mins of a 30-min session, offer to continue. Warn when approaching time limit.
 
 ### Session pacing (prevent rushing)
-Check session-state.md and session logs to count sessions today.
+**Always count sessions from the session log files** - these are the source of truth for completed sessions. Check `./progress/[language]/sessions/` for today's date file and count session entries within it. Do not assume zero sessions just because session-state.md is missing or shows idle.
 
 - **1-2 sessions/day:** Normal - proceed as usual
 - **3+ sessions/day:** Before starting, run a retention check:
