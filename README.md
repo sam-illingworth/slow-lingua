@@ -108,9 +108,19 @@ Edit your `app/user-profile.md` — Claude will adapt accordingly.
 ### Adding reading materials
 Add texts to `content/[language]/stories/` — Claude will use them for reading exercises.
 
+## Bonus: Ralph Loop Pattern
+
+This repo includes reusable files for the **Ralph Loop** context management pattern — a technique for maintaining AI effectiveness across long sessions by checkpointing state to external files.
+
+- `ralph-loop-skill.md` — Full explanation with setup guide and examples
+- `ralph-loop-minimal.md` — Drop-in template for any project
+
+Copy these to your other Claude Code projects to prevent context degradation.
+
 ## Credits
 
 - Methodology adapted from [Artificial Corner](https://artificialcorner.com/s/language)
+- Ralph Loop pattern from [Chase H AI](https://www.youtube.com/@ChaseHAI)
 - Built with [Claude Code](https://claude.ai/code)
 
 ## License
