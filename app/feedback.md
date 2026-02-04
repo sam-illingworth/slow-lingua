@@ -72,6 +72,15 @@ Implement mid-session checkpointing so a fresh context window can resume exactly
 
 **Status:** Implemented - added `session-state.md` and checkpointing instructions to CLAUDE.md.
 
+### Pacing Concern
+User notes tendency to rush through material.
+
+**Rule added:**
+- 1-2 sessions/day: Fine
+- 3+ sessions/day: Require retention quiz (5 questions from earlier sessions) before allowing more. If <60%, suggest break. If ≥60%, allow but keep session lighter.
+
+**Status:** Implemented in CLAUDE.md and session-state.md tracks sessions per day.
+
 ---
 
 ## Future Feedback

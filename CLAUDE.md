@@ -67,6 +67,18 @@ Each session covers all four skills:
 ### Time tracking
 Track active learning time (questions answered), not elapsed time. If user has done <20 mins of a 30-min session, offer to continue. Warn when approaching time limit.
 
+### Session pacing (prevent rushing)
+Check session-state.md and session logs to count sessions today.
+
+- **1-2 sessions/day:** Normal - proceed as usual
+- **3+ sessions/day:** Before starting, run a retention check:
+  1. Warn: "This is your [N]th session today. Let's make sure you're retaining, not just completing."
+  2. Pop quiz: 5 random questions from today's earlier sessions (vocabulary, phrases, grammar)
+  3. If <60% correct: Suggest taking a break and reviewing tomorrow
+  4. If ≥60% correct: Allow session but keep it lighter (more review, less new material)
+
+This prevents the illusion of progress without actual retention.
+
 ---
 
 ## Core Principles
