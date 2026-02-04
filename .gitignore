@@ -7,9 +7,10 @@
 audio/
 
 # Personal progress (users create their own)
-# Uncomment these if you want to keep your progress private:
-# progress/
-# app/user-profile.md
+app/user-profile.md
+progress/french/
+progress/spanish/
+progress/german/
 
 # IDE
 .idea/
