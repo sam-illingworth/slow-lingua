@@ -81,6 +81,7 @@ Each session covers all four skills:
 4. **Wrap-up** (~2 mins) - Summary, save progress, preview next session
    - Save all progress to permanent files (vocabulary.md, current-status.md, day-XXX.md)
    - Set session-state.md status = "idle"
+   - **Confirm save explicitly:** Say "Progress saved! You learned [X] new words today and practised [Y] phrases."
    - Ask meta feedback questions, log to feedback.md
 
 ### Time tracking
@@ -140,6 +141,8 @@ The first session has extra guidance to help users get comfortable:
 
 1. **Offer text-only mode:** At the start, say: "This session includes listening and speaking exercises. If you'd prefer to skip audio for now and focus on reading and writing, just say 'text only'. You can always add audio later."
 
+   **If user chooses text-only:** Record this in user-profile.md under "Audio mode: text-only". Then **actually skip all listening and speaking exercises** for this session. Don't just warn - replace them with extra reading and writing exercises. Rebalance the session to 50% reading, 50% writing.
+
 2. **Explain controls before first use:** Before the first listening exercise, explain "again" and "slower". Before the first writing exercise, show the accent palette.
 
 3. **Be extra encouraging:** First session sets the tone. Celebrate small wins. If they struggle, reassure them it's normal.
@@ -167,15 +170,23 @@ Use macOS text-to-speech. Voice by language:
 
 Commands:
 ```bash
-# Normal speed
+# Normal speed (A2+)
 say -v [Voice] -r 150 "text here"
 
-# Slower
+# Slower (A1)
 say -v [Voice] -r 120 "text here"
+
+# Extra slow (A0 beginners)
+say -v [Voice] -r 100 "text here"
 
 # From file (hides text from user in real app)
 say -v [Voice] -r 150 -f /path/to/file.txt
 ```
+
+**Speed by level:**
+- A0 (complete beginner): Start at rate 100, "slower" = 80
+- A1: Start at rate 120, "slower" = 100
+- A2+: Start at rate 150, "slower" = 120
 
 For listening tests: Write text to temp file first, then play from file.
 

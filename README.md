@@ -42,6 +42,7 @@ A structured system for learning languages using Claude as your tutor. Covers al
    npm install -g @anthropic-ai/claude-code
    ```
    If you see "npm: command not found", install [Node.js](https://nodejs.org/) first.
+   If you see "permission denied", try: `sudo npm install -g @anthropic-ai/claude-code`
 
 2. **Clone this repo:**
    ```bash
