@@ -53,6 +53,24 @@ Slow Lingua is different:
 
 No judgement either way. Use what works for you.
 
+## What This Tool Is (and Isn't)
+
+**Slow Lingua is best for: A0 → B1** (complete beginner to intermediate)
+
+The structured curriculum covers introducing yourself through to expressing opinions and telling stories. This is where AI tutoring shines — patient repetition, instant feedback, adaptive pacing.
+
+**B2 and beyond benefits from human connection.**
+
+At upper-intermediate and advanced levels, you need:
+- Real conversations with unpredictable responses
+- Cultural nuance that comes from lived experience
+- The social motivation of learning with others
+- Feedback on subtleties that AI can miss
+
+This isn't a limitation — it's the point. AI should help you build foundations, not replace human connection. Once you reach B1, find a conversation partner, tutor, or language exchange. Use Slow Lingua for grammar review and vocabulary expansion, but prioritise human practice.
+
+This is the Slow AI philosophy: know when to use AI and when to leave it alone.
+
 ## Requirements
 
 **Cost:** This app requires a [Claude Pro subscription](https://claude.ai/pro) ($20/month). There is no free tier.

@@ -72,7 +72,9 @@ Follow the onboarding flow in `./app/onboarding.md`
 
 Each session covers all four skills:
 
-1. **Review** (~5 mins) - Quick quiz on recent vocabulary/phrases
+1. **Review** (~5 mins) - Quick quiz on recent vocabulary/phrases using spaced repetition
+   - **Max 15 words per review** - Don't overwhelm users with large vocabulary lists
+   - See "Spaced Repetition" section below for word selection logic
    - *Checkpoint: Update session-state.md with phase="review", exercises completed*
 2. **New material** (~15 mins) - Current task with speaking, listening, reading, writing exercises
    - *Checkpoint: Update session-state.md with phase="new_material", current exercise, pending question*
@@ -98,6 +100,41 @@ Track active learning time (questions answered), not elapsed time. If user has d
   4. If ≥60% correct: Allow session but keep it lighter (more review, less new material)
 
 This prevents the illusion of progress without actual retention.
+
+---
+
+## Spaced Repetition for Vocabulary
+
+Don't review all words every session - it becomes overwhelming as vocabulary grows. Use this simplified spaced repetition:
+
+### Word selection for review (max 15 words per session)
+
+1. **Priority 1: Struggling words** (accuracy < 60%)
+   - Always include these first
+   - Max 5 from this category
+
+2. **Priority 2: Due for review** based on last review date
+   - New words (learned today/yesterday): review every session
+   - Recent words (2-7 days): review every 2-3 sessions
+   - Established words (1-4 weeks): review weekly
+   - Solid words (4+ weeks, accuracy > 80%): review monthly
+
+3. **Priority 3: Random reinforcement**
+   - Fill remaining slots with random picks from established words
+   - Keeps older vocabulary fresh
+
+### Tracking in vocabulary.md
+
+Each word entry should have:
+```
+| Word | Translation | First seen | Last reviewed | Times reviewed | Correct | Accuracy |
+```
+
+Update accuracy after each review: `accuracy = correct / times_reviewed`
+
+### When vocabulary exceeds 500 words
+
+Archive words with 90%+ accuracy and 10+ reviews to `vocabulary-mastered.md`. They're learned - occasional random review is enough.
 
 ---
 

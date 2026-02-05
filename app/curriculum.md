@@ -205,21 +205,84 @@ Tasks unlock adaptively - when you've mastered prerequisites, next tasks become 
 
 ## Advanced Tasks (B2+)
 
+**Note:** At B2 level, you should be supplementing with human conversation practice. These tasks build vocabulary and structure, but real fluency comes from talking to real people. Consider iTalki, language exchanges, or conversation groups alongside this curriculum.
+
+---
+
 ### Task 17: Work and Career
 **Goal:** Professional conversations
+**Phrases:**
+- I work in...
+- My responsibilities include...
+- I'm looking for a job in...
+- Could you tell me about the role?
+- I have experience with...
+- What are the next steps?
+
+**Grammar focus:** Formal register, conditional politeness
 **Unlocks:** After Tasks 13, 15
+
+---
 
 ### Task 18: Current Events
 **Goal:** Discuss news and issues
+**Phrases:**
+- Did you hear about...?
+- According to the news...
+- I read that...
+- What do you think about...?
+- It seems like...
+- The situation is...
+
+**Grammar focus:** Reported speech, passive voice
 **Unlocks:** After Tasks 13, 14
+
+---
 
 ### Task 19: Hypotheticals
 **Goal:** "If I were...", "I would have..."
+**Phrases:**
+- If I had more time, I would...
+- If I were you, I would...
+- What would you do if...?
+- I wish I had...
+- If only I could...
+- Had I known, I would have...
+
+**Grammar focus:** Conditional tenses (2nd and 3rd conditional)
 **Unlocks:** After Tasks 14, 15
+
+---
 
 ### Task 20: Debate and Persuasion
 **Goal:** Argue a position
+**Phrases:**
+- On one hand... on the other hand...
+- The main argument is...
+- However, we must consider...
+- I see your point, but...
+- The evidence suggests...
+- In conclusion...
+
+**Grammar focus:** Linking words, hedging language
 **Unlocks:** After Tasks 13, 18
+
+---
+
+## Beyond B2: Transition to Human Practice
+
+After completing Task 20, you have the foundations for advanced conversation. But AI practice has limits. To reach C1 and beyond:
+
+1. **Find conversation partners** — iTalki, Tandem, local language exchanges
+2. **Consume native media** — Films, podcasts, books without translation
+3. **Live the language** — Travel, immersion, thinking in the language
+
+Use Slow Lingua for:
+- Vocabulary expansion (add your own word lists)
+- Grammar review when you encounter gaps
+- Structured practice between conversations
+
+But prioritise human connection. That's where fluency lives.
 
 ---
 
