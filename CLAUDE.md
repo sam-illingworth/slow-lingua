@@ -28,6 +28,20 @@ This app uses external state files for session continuity. Each conversation may
 
 When this project loads, follow these steps:
 
+### 0. Check platform (first run only)
+On first interaction, run `uname` to detect the operating system.
+- **macOS (Darwin):** Full support. Proceed normally.
+- **Windows/Linux:** Warn the user before starting:
+
+  "I notice you're on [Windows/Linux]. The listening exercises use macOS text-to-speech which won't work here. You have options:
+  1. Continue without audio (focus on reading/writing)
+  2. Set up alternative TTS (see README troubleshooting)
+  3. Stop and switch to a Mac
+
+  Which would you prefer?"
+
+  Store their choice in user-profile.md under "Platform preferences" so you don't ask again.
+
 ### 1. Read session state FIRST
 Read `./progress/[language]/session-state.md` before anything else.
 - If status is `in_progress`: Resume from the exact position recorded. Do not re-ask questions already answered.

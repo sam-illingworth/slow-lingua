@@ -24,24 +24,38 @@ A structured system for learning languages using Claude as your tutor. Covers al
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) (requires Claude Pro subscription)
+**Cost:** This app requires a [Claude Pro subscription](https://claude.ai/pro) ($20/month). There is no free tier.
+
+- [Node.js](https://nodejs.org/) 18 or higher
+- [Claude Code](https://claude.ai/code) CLI tool
 - macOS recommended (for `say` command text-to-speech)
 - Speech-to-text tool recommended (Wispr Flow, macOS Dictation, or similar)
 
+**Platform notes:**
+- **macOS:** Full support (audio + speech)
+- **Windows/Linux:** Works, but requires alternative TTS setup (see Troubleshooting)
+
 ## Quick Start
 
-1. Clone this repo:
+1. **Install Claude Code** (if you haven't already):
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+   If you see "npm: command not found", install [Node.js](https://nodejs.org/) first.
+
+2. **Clone this repo:**
    ```bash
    git clone https://github.com/sam-illingworth/slow-lingua.git
    cd slow-lingua
    ```
 
-2. Open Claude Code in this directory:
+3. **Start Claude Code:**
    ```bash
    claude
    ```
+   You'll need to log in with your Claude Pro account on first run.
 
-3. Claude will read `CLAUDE.md` and either:
+4. Claude will read `CLAUDE.md` and either:
    - Run onboarding (if you're new)
    - Start a session (if you have an existing profile)
 
