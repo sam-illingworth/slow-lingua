@@ -18,12 +18,8 @@ Before we begin, a few questions to personalise your experience."
 
 1. French
 2. Spanish
-3. German
-4. Italian
-5. Portuguese
-6. Japanese
-7. Chinese (Mandarin)
-8. Other (specify)
+
+*More languages coming soon.*
 
 ---
 

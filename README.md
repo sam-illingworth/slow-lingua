@@ -67,6 +67,53 @@ Easy to add more — copy a language file in `app/languages/` and adapt.
 3. **Practice** — Conversation or extended exercise
 4. **Wrap-up** — Summary, preview next session
 
+### Example Session
+
+Here's what a session looks like:
+
+```
+Claude: Welcome back. This is session 3. How are you feeling about French today?
+        1. Fresh and ready
+        2. A bit tired but willing
+        3. Struggling - keep it light
+
+You: 1
+
+Claude: Great. Let's start with a quick review.
+
+        [Audio plays: "Bonjour, je m'appelle Marie."]
+
+        What did she say?
+
+You: Hello, my name is Marie
+
+Claude: Correct! Now your turn. How would you say "My name is Sam"?
+
+You: Je m'appelle Sam
+
+Claude: Perfect. Now a new phrase. Listen carefully.
+
+        [Audio plays: "J'habite à Paris."]
+
+        This means "I live in Paris."
+        - "J'habite" = I live
+        - "à" = in (for cities)
+
+        How would you say "I live in Edinburgh"?
+
+You: J'habite a Edinburgh
+
+Claude: Almost! You need the accent: "J'habite à Edinburgh."
+        The à (with accent) means "in" or "at" for locations.
+        Without the accent, "a" means "has" - different word entirely.
+
+        Try again?
+
+You: J'habite à Edinburgh
+
+Claude: Good. Let's practise a few more...
+```
+
 ### Progress Tracking
 Your progress saves to markdown files in `progress/[language]/`:
 - Vocabulary with accuracy tracking
@@ -116,6 +163,64 @@ This repo includes reusable files for the **Ralph Loop** context management patt
 - `ralph-loop-minimal.md` — Drop-in template for any project
 
 Copy these to your other Claude Code projects to prevent context degradation.
+
+## Troubleshooting
+
+### "say" command not found (Windows/Linux)
+
+The listening exercises use macOS text-to-speech (`say` command). On other platforms:
+
+- **Windows:** Install a TTS tool like [Balabolka](http://balabolka.site/balabolka.htm) or use browser-based TTS. Update the commands in `CLAUDE.md` to match.
+- **Linux:** Install `espeak` or `festival` (`sudo apt install espeak`). Replace `say -v Thomas` with `espeak -v fr`.
+- **Alternative:** Skip audio exercises and focus on reading/writing, or use an online TTS service.
+
+### Setting up speech-to-text
+
+Speaking exercises work best with speech-to-text so Claude can evaluate your pronunciation. Here are your options:
+
+**Option 1: macOS Dictation (Free, built-in)**
+
+1. Open System Settings → Keyboard → Dictation
+2. Turn Dictation on
+3. Choose your language (add French, Spanish, etc.)
+4. Set shortcut to "Press Fn Key Twice" (default)
+5. To use: press Fn twice, speak, press Fn twice again to stop
+
+Pros: Free, no install, supports multiple languages
+Cons: Requires internet, slight delay, can be finicky with accents
+
+**Option 2: Wispr Flow (Recommended)**
+
+1. Download from [wispr.com](https://www.wispr.com/)
+2. Install and grant microphone permissions
+3. Set up your activation method (default: hold Fn key)
+4. Works anywhere you can type, including Claude Code
+
+Pros: Fast, accurate, works offline, handles accents well
+Cons: Paid subscription after trial
+
+**Option 3: No speech-to-text**
+
+You can still do speaking exercises:
+- Speak your answer aloud for pronunciation practice
+- Type what you said for Claude to evaluate
+- Less immediate feedback, but still valuable practice
+
+To skip speaking exercises entirely, tell Claude at the start of your session: "Focus on reading and writing today, skip speaking exercises."
+
+### Claude Code not starting
+
+Make sure you have:
+1. A Claude Pro subscription
+2. Claude Code installed: `npm install -g @anthropic-ai/claude-code`
+3. Run `claude` from within the slow-lingua directory
+
+### Session not resuming correctly
+
+If Claude starts fresh instead of resuming:
+- Check that `progress/[language]/session-state.md` exists
+- Make sure the previous session ended properly (status should be "idle" or "in_progress")
+- If files are corrupted, delete `session-state.md` and start fresh
 
 ## Credits
 
