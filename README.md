@@ -22,6 +22,37 @@ A structured system for learning languages using Claude as your tutor. Covers al
 - **Grammar in context** — Rules explained when you encounter them, not in isolation
 - **"What did you mean?"** — When you make mistakes, Claude helps you say what YOU wanted to say
 
+## Why Not Duolingo?
+
+Duolingo is great for what it does. But it's designed to maximise engagement, not learning. Streaks, hearts, leaderboards, and notifications keep you coming back — but also create guilt when you miss a day.
+
+Slow Lingua is different:
+
+| | Duolingo | Slow Lingua |
+|---|----------|-------------|
+| **Goal** | Keep you engaged | Help you learn |
+| **Motivation** | Streaks, XP, leagues | Intrinsic (your own goals) |
+| **Missed a day?** | Streak lost, guilt | Nothing happens |
+| **Mistakes** | Marked wrong | "What did you mean?" |
+| **Grammar** | Minimal explanation | Explained in context |
+| **Pace** | App decides | You decide |
+| **Cost** | Free (with ads) or $7/mo | $20/mo (Claude Pro) |
+
+**Slow Lingua is for you if:**
+- You're tired of gamification and guilt
+- You want grammar explained, not just pattern-matched
+- You prefer 30 focused minutes over 5 distracted ones
+- You're comfortable with a CLI tool
+- You already have Claude Pro
+
+**Stick with Duolingo if:**
+- You need external motivation (streaks work for you)
+- You want a polished mobile app
+- You're on a tight budget
+- You prefer short 5-minute sessions
+
+No judgement either way. Use what works for you.
+
 ## Requirements
 
 **Cost:** This app requires a [Claude Pro subscription](https://claude.ai/pro) ($20/month). There is no free tier.
