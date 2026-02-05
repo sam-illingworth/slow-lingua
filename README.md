@@ -71,6 +71,22 @@ This isn't a limitation — it's the point. AI should help you build foundations
 
 This is the Slow AI philosophy: know when to use AI and when to leave it alone.
 
+## Known Limitations
+
+This is a prototype built in Claude Code, not a polished app. Some rough edges:
+
+**Tool call visibility:** You'll see technical output (bash commands, file operations) during exercises. This can break immersion, especially during listening exercises where the phrase appears before the audio plays. There's no way to hide this in Claude Code's interface.
+
+**Input suggestions:** Claude Code may show greyed-out predictive text that auto-completes your answers. This defeats the purpose of exercises. The repo includes a `.claude/settings.json` that disables this, but you may need to restart Claude Code for it to take effect.
+
+**Audio limitations:** Listening exercises use macOS text-to-speech. The quality is decent but robotic. Real language learning benefits from hearing native speakers with natural rhythm and intonation.
+
+**No mobile app:** This runs in a terminal. You can't use it on your phone during your commute.
+
+**Session interruptions:** If Claude Code crashes or you close the terminal mid-session, progress since the last checkpoint may be lost. The system saves at wrap-up, not continuously.
+
+These are acceptable trade-offs for a free, adaptable prototype. If you want polish, use Duolingo. If you want flexibility and depth, this works.
+
 ## Requirements
 
 **Cost:** This app requires a [Claude Pro subscription](https://claude.ai/pro) ($20/month). There is no free tier.

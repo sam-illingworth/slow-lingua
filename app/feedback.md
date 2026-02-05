@@ -99,6 +99,27 @@ Seeing file operations mid-session is distracting from learning.
 
 ---
 
+## Session 3 - 2026-02-05
+
+### Input Suggestions Problem
+Claude Code's predictive text (greyed-out suggestions) was auto-completing answers before user could type them. Defeats the purpose of exercises.
+
+**Solution:** Created project-specific `.claude/settings.json` with `{"inputSuggestions": false}`.
+
+**Status:** Fixed and committed.
+
+### Tool Call Visibility
+User frustrated by seeing bash commands and tool output during exercises. Breaks immersion.
+
+**Limitation:** Can't hide Claude Code's tool call display - it's built into the interface. Unlike file operations (which can be batched to wrap-up), audio playback must happen in real-time.
+
+**Possible future solutions:**
+1. Build a dedicated app UI that hides the scaffolding
+2. Accept it as a limitation of the Claude Code prototype
+3. Offer text-only mode for users who find it too distracting
+
+---
+
 ## Future Feedback
 
 [Add new feedback as collected]
