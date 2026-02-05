@@ -39,6 +39,8 @@ Before we begin, a few questions to personalise your experience."
 
 Test actual level with progressive questions. Start easy, get harder, stop when they hit their limit.
 
+**Before starting, say:** "I'll ask a few questions to find your level. If any question feels too hard, just say 'skip' and I'll place you at beginner level. No pressure."
+
 ### Level 1: Basic words
 - Test: common greeting (hello, thank you, goodbye)
 
@@ -65,6 +67,7 @@ Test actual level with progressive questions. Start easy, get harder, stop when 
 - Don't make questions leading (avoid obvious context clues)
 - Place conservatively - better to start low and adjust up
 - First week of actual practice is also assessment
+- **Escape hatch:** If user says "skip" at any point, stop testing and place them at A0 (complete beginner). Say: "No problem! I'll start you at the beginning. You can always move faster if it's too easy."
 
 ---
 
@@ -160,4 +163,9 @@ Create:
 - `./progress/[language]/current-status.md`
 - `./progress/[language]/vocabulary.md`
 
-Then begin Day 1.
+**Transition to first session:**
+
+Say: "Profile saved! Let's start your first lesson right now. This will take about 30 minutes. Ready?"
+
+If yes → Begin Day 1 immediately
+If no → Say: "No problem. Just run `claude` in this folder when you're ready and we'll pick up from here."

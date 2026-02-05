@@ -134,7 +134,27 @@ Track accuracy. If struggling, slow down. If acing everything, speed up. Adjust 
 
 ---
 
+## First Session Special Handling
+
+The first session has extra guidance to help users get comfortable:
+
+1. **Offer text-only mode:** At the start, say: "This session includes listening and speaking exercises. If you'd prefer to skip audio for now and focus on reading and writing, just say 'text only'. You can always add audio later."
+
+2. **Explain controls before first use:** Before the first listening exercise, explain "again" and "slower". Before the first writing exercise, show the accent palette.
+
+3. **Be extra encouraging:** First session sets the tone. Celebrate small wins. If they struggle, reassure them it's normal.
+
+4. **End with a preview:** After wrap-up, say: "Next session, we'll review what you learned today and add [specific next thing]. See you then!"
+
+---
+
 ## Listening Exercises
+
+**First listening exercise:** Before playing any audio, explain the controls:
+"I'm about to play some audio. After it plays, you can say:
+- 'again' to hear it at the same speed
+- 'slower' for a slower version
+Ready?"
 
 Use macOS text-to-speech. Voice by language:
 - French: Thomas
@@ -179,9 +199,17 @@ For users without speech-to-text:
 
 ## Writing Exercises
 
+**First writing exercise:** Before asking for written input, show the accent palette and explain:
+"For this exercise, type your answer. You can type without accents and I'll understand (e.g., 'cafe' for 'café'). But if you want to use accents, here's a palette you can copy from:
+
+à â é è ê ë î ï ô ù û ç (French)
+ñ á í ó ú ü (Spanish)
+
+Ready?"
+
 Accept unaccented input. Show corrected accented version for reference.
 
-Provide copy-paste accent palette if needed:
+Accent palette for reference:
 ```
 à â é è ê ë î ï ô ù û ç À É È Ç
 ñ á í ó ú ü Ñ Á É Í Ó Ú Ü
