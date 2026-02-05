@@ -191,7 +191,7 @@ Cons: Requires internet, slight delay, can be finicky with accents
 
 **Option 2: Wispr Flow (Recommended)**
 
-1. Download from [wispr.com](https://www.wispr.com/)
+1. Download from [wisprflow.ai](https://wisprflow.ai/r?SAM2113)
 2. Install and grant microphone permissions
 3. Set up your activation method (default: hold Fn key)
 4. Works anywhere you can type, including Claude Code
