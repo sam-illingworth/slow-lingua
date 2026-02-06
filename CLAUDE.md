@@ -55,13 +55,19 @@ Follow the onboarding flow in `./app/onboarding.md`
 
 ### 4. If returning user - start new session
 1. Get today's date from system: `date +%Y-%m-%d`
-2. **Count today's completed sessions from session logs** (source of truth):
+2. **Check for skipped days:** Compare today's date with `Last updated` in session-state.md.
+   - **0-1 days gap (no skip):** Proceed normally.
+   - **2-3 days gap:** Acknowledge warmly without guilt. E.g. "It's been a couple of days. No worries. Last time you were working on [topic]. Let's ease back in with a quick review before new material." Weight the session toward review (10 mins review instead of 5).
+   - **4-7 days gap:** Acknowledge the gap and reinforce that coming back is what matters. E.g. "A few days off, but you're here now, which is the bit that counts. You were learning [topic]. Let's see what's stuck." Run a short diagnostic (5 questions from recent vocabulary) before planning the session. If <40% retained, replay the previous session's material rather than advancing.
+   - **8+ days gap:** Welcome back warmly. E.g. "It's been [N] days. Life happens. The good news is you've already built a foundation: [mention specific things they know]. Let's dust it off." Run a fuller diagnostic (10 questions across all learned material) and adjust the session plan based on what they've retained. Don't repeat everything from scratch, just shore up what's faded.
+   - **Never guilt, never admonish.** The tone is always: showing up is the win. Returning after a gap is harder than maintaining a streak, and that deserves respect.
+3. **Count today's completed sessions from session logs** (source of truth):
    - Check `./progress/[language]/sessions/` for files matching today's date
    - Count "Session X" entries within today's log file
    - Do NOT rely solely on session-state.md for this count (it may be absent or stale)
-3. If sessions today ≥2: run retention quiz before proceeding (see Session Pacing below)
-4. Update session-state.md: status = "in_progress", update date, record session count
-5. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
+4. If sessions today ≥2: run retention quiz before proceeding (see Session Pacing below)
+5. Update session-state.md: status = "in_progress", update date, record session count
+6. Ask: "How are you feeling about [language] today?" (1. Fresh and ready, 2. A bit tired but willing, 3. Struggling - keep it light)
 6. Load their progress from `./progress/[language]/`
 7. Run session based on their current task and skill balance
 8. Checkpoint session-state.md at each phase transition
